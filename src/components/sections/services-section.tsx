@@ -1,4 +1,48 @@
 import { useReveal } from "@/hooks/use-reveal"
+import Icon from "@/components/ui/icon"
+
+const directions = [
+  {
+    title: "IT-разработка",
+    icon: "Code2",
+    description: "Backend, frontend, мобильные приложения, DevOps. Работай над реальными продуктами в ведущих командах",
+    professions: ["Frontend Developer", "Python Backend", "iOS/Android", "DevOps"],
+    direction: "top",
+    color: "text-blue-400",
+  },
+  {
+    title: "Аналитика & Data",
+    icon: "BarChart3",
+    description: "Data Science, бизнес-аналитика, ML. Решай настоящие бизнес-задачи с реальными данными",
+    professions: ["Data Analyst", "Data Scientist", "BI-аналитик", "Product Analyst"],
+    direction: "right",
+    color: "text-emerald-400",
+  },
+  {
+    title: "Дизайн",
+    icon: "Pen",
+    description: "UI/UX, продуктовый дизайн, графика. Создавай интерфейсы для компаний из Forbes 500",
+    professions: ["UI/UX Designer", "Product Designer", "Motion", "Brand"],
+    direction: "left",
+    color: "text-purple-400",
+  },
+  {
+    title: "Маркетинг",
+    icon: "Megaphone",
+    description: "Digital-маркетинг, SMM, performance. Запускай кампании с реальным бюджетом от работодателей",
+    professions: ["Performance", "SMM-специалист", "SEO", "Контент"],
+    direction: "bottom",
+    color: "text-pink-400",
+  },
+  {
+    title: "Управление",
+    icon: "Briefcase",
+    description: "Project management, продуктовое мышление, Agile. Веди реальные проекты с командой",
+    professions: ["Project Manager", "Product Manager", "Scrum Master", "Team Lead"],
+    direction: "top",
+    color: "text-orange-400",
+  },
+]
 
 export function ServicesSection() {
   const { ref, isVisible } = useReveal(0.3)
@@ -10,40 +54,19 @@ export function ServicesSection() {
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className={`mb-12 transition-all duration-700 md:mb-16 ${
+          className={`mb-10 transition-all duration-700 md:mb-12 ${
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Услуги
+            Направления
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Наши компетенции</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Выбери свой путь</p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
-          {[
-            {
-              title: "Веб-разработка",
-              description: "Создание современных веб-приложений любой сложности",
-              direction: "top",
-            },
-            {
-              title: "UI/UX Дизайн",
-              description: "Проектирование удобных и красивых интерфейсов",
-              direction: "right",
-            },
-            {
-              title: "Мобильные приложения",
-              description: "Кроссплатформенная разработка для iOS и Android",
-              direction: "left",
-            },
-            {
-              title: "Консалтинг",
-              description: "Техническая экспертиза и стратегическое планирование",
-              direction: "bottom",
-            },
-          ].map((service, i) => (
-            <ServiceCard key={i} service={service} index={i} isVisible={isVisible} />
+        <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5 md:gap-6">
+          {directions.map((dir, i) => (
+            <DirectionCard key={i} dir={dir} index={i} isVisible={isVisible} />
           ))}
         </div>
       </div>
@@ -51,28 +74,23 @@ export function ServicesSection() {
   )
 }
 
-function ServiceCard({
-  service,
+function DirectionCard({
+  dir,
   index,
   isVisible,
 }: {
-  service: { title: string; description: string; direction: string }
+  dir: { title: string; icon: string; description: string; professions: string[]; direction: string; color: string }
   index: number
   isVisible: boolean
 }) {
   const getRevealClass = () => {
     if (!isVisible) {
-      switch (service.direction) {
-        case "left":
-          return "-translate-x-16 opacity-0"
-        case "right":
-          return "translate-x-16 opacity-0"
-        case "top":
-          return "-translate-y-16 opacity-0"
-        case "bottom":
-          return "translate-y-16 opacity-0"
-        default:
-          return "translate-y-12 opacity-0"
+      switch (dir.direction) {
+        case "left": return "-translate-x-16 opacity-0"
+        case "right": return "translate-x-16 opacity-0"
+        case "top": return "-translate-y-16 opacity-0"
+        case "bottom": return "translate-y-16 opacity-0"
+        default: return "translate-y-12 opacity-0"
       }
     }
     return "translate-x-0 translate-y-0 opacity-100"
@@ -80,17 +98,21 @@ function ServiceCard({
 
   return (
     <div
-      className={`group transition-all duration-700 ${getRevealClass()}`}
-      style={{
-        transitionDelay: `${index * 150}ms`,
-      }}
+      className={`group cursor-pointer rounded-xl border border-foreground/10 bg-foreground/5 p-4 transition-all duration-700 hover:border-primary/30 hover:bg-primary/5 md:p-5 ${getRevealClass()}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="mb-3 flex items-center gap-3">
-        <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
-        <span className="font-mono text-xs text-foreground/60">0{index + 1}</span>
+      <div className={`mb-3 ${dir.color}`}>
+        <Icon name={dir.icon as "Code2"} size={28} fallback="CircleAlert" />
       </div>
-      <h3 className="mb-2 font-sans text-2xl font-light text-foreground md:text-3xl">{service.title}</h3>
-      <p className="max-w-sm text-sm leading-relaxed text-foreground/80 md:text-base">{service.description}</p>
+      <h3 className="mb-2 font-sans text-base font-medium text-foreground md:text-lg">{dir.title}</h3>
+      <p className="mb-3 hidden text-xs leading-relaxed text-foreground/60 md:block">{dir.description}</p>
+      <div className="flex flex-col gap-1">
+        {dir.professions.map((prof) => (
+          <span key={prof} className="font-mono text-xs text-foreground/40 transition-colors group-hover:text-foreground/60">
+            → {prof}
+          </span>
+        ))}
+      </div>
     </div>
   )
 }

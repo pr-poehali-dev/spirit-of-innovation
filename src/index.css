@@ -4,27 +4,27 @@
 
 @layer base {
   :root {
-    /* Dark theme by default - matching origin */
-    --background: 0 0% 7%;
+    /* SkillOrbit — dark navy + orange */
+    --background: 222 47% 6%;
     --foreground: 0 0% 96%;
 
-    --card: 0 0% 9%;
+    --card: 222 45% 9%;
     --card-foreground: 0 0% 96%;
 
-    --popover: 0 0% 9%;
+    --popover: 222 45% 9%;
     --popover-foreground: 0 0% 96%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 96%;
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 222 40% 15%;
     --secondary-foreground: 0 0% 96%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 222 40% 15%;
+    --muted-foreground: 222 20% 55%;
 
-    --accent: 35 82% 55%;
-    --accent-foreground: 0 0% 96%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 96%;
@@ -52,26 +52,26 @@
   }
 
   .dark {
-    --background: 0 0% 7%;
+    --background: 222 47% 6%;
     --foreground: 0 0% 96%;
 
-    --card: 0 0% 9%;
+    --card: 222 45% 9%;
     --card-foreground: 0 0% 96%;
 
-    --popover: 0 0% 9%;
+    --popover: 222 45% 9%;
     --popover-foreground: 0 0% 96%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 96%;
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 222 40% 15%;
     --secondary-foreground: 0 0% 96%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 222 40% 15%;
+    --muted-foreground: 222 20% 55%;
 
-    --accent: 35 82% 55%;
-    --accent-foreground: 0 0% 96%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 96%;
