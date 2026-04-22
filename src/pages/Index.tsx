@@ -264,9 +264,10 @@ export default function Index() {
               <p className="font-mono text-xs text-primary">Обучение с реальными проектами от работодателей</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-5xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-6xl lg:text-7xl">
-              <span className="px-0 py-[31px] my-0 mx-0 font-extralight text-8xl text-slate-100">Учись.
-Создавай.
-Трудоустраивайся.</span>
+              <span className="text-balance">
+                Выбери направление →
+                <br />
+                <span className="text-primary">Обучайся на реальных проектах</span>
                 <br />
                 → Получи работу
               </span>
