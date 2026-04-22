@@ -271,7 +271,7 @@ export default function Index() {
               <span className="text-pretty">SkillOrbit — платформа, где реальные проекты от компаний заменяют скучные домашние задания и дают точку роста.</span>
             </p>
             <div className="mb-8 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-md duration-700 delay-300">
-              <p className="font-mono text-xs text-primary">Обучение с реальными проектами от работодателей</p>
+              <p className="font-mono text-xs text-primary">Объединяем студентов и работодателей в единую экосистему</p>
             </div>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
               <MagneticButton
