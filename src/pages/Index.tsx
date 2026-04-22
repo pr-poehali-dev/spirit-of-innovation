@@ -261,13 +261,12 @@ export default function Index() {
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-md duration-700">
-              <p className="font-mono text-xs text-primary">IT · Аналитика · Дизайн · Маркетинг · Управление</p>
+              <p className="font-mono text-xs text-primary">Обучение с реальными проектами от работодателей</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-5xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-6xl lg:text-7xl">
-              <span className="text-balance">
-                Выбери направление →
-                <br />
-                <span className="text-primary">Обучайся на реальных проектах</span>
+              <span className="px-0 py-[31px] my-0 mx-0 font-extralight text-8xl text-slate-100">Учись.
+Создавай.
+Трудоустраивайся.</span>
                 <br />
                 → Получи работу
               </span>
