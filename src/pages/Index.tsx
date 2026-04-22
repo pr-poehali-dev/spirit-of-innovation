@@ -277,11 +277,11 @@ export default function Index() {
               <MagneticButton
                 size="lg"
                 variant="primary"
-                onClick={() => navigate("/start")}
+                onClick={() => navigate("/start?role=student")}
               >
                 Начать обучение
               </MagneticButton>
-              <MagneticButton size="lg" variant="secondary" onClick={() => navigate("/start")}>
+              <MagneticButton size="lg" variant="secondary" onClick={() => navigate("/start?role=employer")}>
                 Стать работодателем
               </MagneticButton>
             </div>

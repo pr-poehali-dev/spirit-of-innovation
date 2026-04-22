@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { useNavigate, useSearchParams } from "react-router-dom"
 import { GrainOverlay } from "@/components/grain-overlay"
 import { MagneticButton } from "@/components/magnetic-button"
 import Icon from "@/components/ui/icon"
@@ -35,7 +35,13 @@ const placeholders: Record<string, string> = {
 
 export default function Start() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const [role, setRole] = useState<Role>(null)
+
+  useEffect(() => {
+    const r = searchParams.get("role") as Role
+    if (r && ["student", "employer", "partner"].includes(r)) setRole(r)
+  }, [searchParams])
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
@@ -84,7 +90,7 @@ export default function Start() {
       </nav>
 
       {/* Main */}
-      <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-12 md:px-12">
+      <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-12 pt-4 md:px-12">
         {submitted ? (
           <div className="flex flex-col items-center gap-6 text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/20 border border-primary/30">
