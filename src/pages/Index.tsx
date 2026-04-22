@@ -264,18 +264,15 @@ export default function Index() {
               <p className="font-mono text-xs text-primary">Обучение с реальными проектами от работодателей</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-5xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-6xl lg:text-7xl">
-              <span className="text-balance">
-                Выбери направление →
-                <br />
-                <span className="text-primary">Обучайся на реальных проектах</span>
+              <span className="text-balance px-0 mx-0 my-3.5 py-[15px] text-8xl">Учись.
+Создавай. 
+Трудоустраивайся.</span>
                 <br />
                 → Получи работу
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/80 duration-1000 delay-200 md:text-xl">
-              <span className="text-pretty">
-                Стажировка, full-time, part-time, удалёнка — выбери формат, который подходит именно тебе.
-              </span>
+              <span className="text-pretty">Стажировка, full-time, part-time, удалёнка — выбери формат, который подходит именно тебе.</span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
               <MagneticButton
