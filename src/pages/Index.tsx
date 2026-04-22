@@ -262,19 +262,15 @@ export default function Index() {
         {/* Hero Section */}
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
-            <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-md duration-700">
+            <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-5xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-6xl lg:text-7xl">
+              <span className="block text-balance">Учись. Создавай. Трудоустраивайся.</span>
+            </h1>
+            <p className="mb-6 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/80 duration-1000 delay-200 md:text-xl">
+              <span className="text-pretty">SkillOrbit — платформа, где реальные проекты от компаний заменяют скучные домашние задания и дают точку роста.</span>
+            </p>
+            <div className="mb-8 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-md duration-700 delay-300">
               <p className="font-mono text-xs text-primary">Обучение с реальными проектами от работодателей</p>
             </div>
-            <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-5xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-6xl lg:text-7xl">
-              <span className="text-balance">
-                <span className="block text-8xl">Учись. Создавай. Трудоустраивайся.</span>
-                <br />
-                → Получи работу
-              </span>
-            </h1>
-            <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/80 duration-1000 delay-200 md:text-xl">
-              <span className="text-pretty">Стажировка, full-time, part-time, удалёнка — выбери формат, который подходит именно тебе.</span>
-            </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
               <MagneticButton
                 size="lg"
